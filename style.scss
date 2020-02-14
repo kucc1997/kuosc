@@ -1,0 +1,71 @@
+$colors: ("primary": #00bda4,
+    "primary-dark": #0b695d,
+    "dark": #000,
+    "white": #fff,
+    "shadow": #ddd,
+    "fonts": #7a7a7a);
+
+@function color($colorName) {
+    @return map-get($map : $colors, $key : $colorName);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+#nav {
+    background-color: transparent;
+
+    .nav-link {
+        color: color(primary-dark);
+        font-weight: 600;
+        margin: 0 .7em;
+        font-size: 1.1em;
+        text-transform: capitalize;
+    }
+
+    .nav-link:hover {
+        color: color(primary);
+    }
+}
+
+.section-banner {
+    height: 85vh;
+    background: url(./img/bg/header-bg.svg);
+    background-size: cover;
+
+    .container-fluid {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 2.8em;
+        font-weight: 700;
+        line-height: 1.3em;
+        color: color(primary-dark);
+    }
+
+    p {
+        padding-top: .5em;
+        margin-right: 5em;
+        font-weight: 500;
+        line-height: 1.8em;
+        color: color(fonts);
+    }
+
+    a {
+        margin-top: 1em;
+    }
+
+    .btn-rounded {
+        background: color(primary);
+        color: color("white");
+        border-radius: 2em;
+        padding: .7em 2em;
+        font-weight: 500;
+    }
+
+    .btn-rounded:hover {
+        background: color(primary-dark);
+    }
+}
