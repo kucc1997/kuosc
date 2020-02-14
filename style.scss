@@ -3,7 +3,7 @@ $colors: ("primary": #00bda4,
     "dark": #000,
     "white": #fff,
     "shadow": #ddd,
-    "fonts": #7a7a7a);
+    "fonts": #746e8c);
 
 @function color($colorName) {
     @return map-get($map : $colors, $key : $colorName);
@@ -47,8 +47,8 @@ body {
 
     p {
         padding-top: .5em;
+        font-size: 1.2em;
         margin-right: 5em;
-        font-weight: 500;
         line-height: 1.8em;
         color: color(fonts);
     }
@@ -67,5 +67,46 @@ body {
 
     .btn-rounded:hover {
         background: color(primary-dark);
+    }
+}
+
+#about {
+    padding: 1em;
+
+    .feature-box {
+        margin: .3em 2em;
+        padding: 3em 2em;
+        transition: .5s;
+        border-radius: .7em;
+
+        img {
+            margin-top: -7em;
+        }
+
+        h2 {
+            padding-top: .3em;
+            font-size: 1.5em;
+            color: color(dark);
+            font-weight: 600;
+            transition: .5s;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.8em;
+            color: color("fonts")
+        }
+    }
+
+    .box-one {
+        background-color: #50d38d33;
+    }
+
+    .box-two {
+        background-color: #9b51e033;
+    }
+
+    .box-three {
+        background-color: #56ccf233;
     }
 }
