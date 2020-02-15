@@ -9,8 +9,41 @@ $colors: ("primary": #00bda4,
     @return map-get($map : $colors, $key : $colorName);
 }
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+a:active {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.btn-rounded {
+    background: color(primary);
+    color: color("white");
+    border-radius: 2em;
+    padding: .7em 2em;
+    font-weight: 500;
+    margin-top: 1em;
+    transition: .5s;
+}
+
+.btn-rounded:hover {
+    background: color(primary-dark);
+    color: color("white");
+    transition: .5s;
+}
+
+
+
+section {
+    padding-top: 4em;
 }
 
 #nav {
@@ -31,7 +64,7 @@ body {
 
 .section-banner {
     height: 85vh;
-    background: url(./img/bg/header-bg.svg);
+    background: url(./img/header-bg.svg);
     background-size: cover;
 
     .container-fluid {
@@ -55,18 +88,6 @@ body {
 
     a {
         margin-top: 1em;
-    }
-
-    .btn-rounded {
-        background: color(primary);
-        color: color("white");
-        border-radius: 2em;
-        padding: .7em 2em;
-        font-weight: 500;
-    }
-
-    .btn-rounded:hover {
-        background: color(primary-dark);
     }
 }
 
@@ -130,6 +151,8 @@ body {
             color: color("fonts")
         }
     }
+
+
 
     img {
         border-radius: .5em;
@@ -248,18 +271,6 @@ body {
         font-size: 1.3em;
         color: color("fonts");
     }
-
-    .btn-rounded {
-        background: color(primary);
-        color: color("white");
-        border-radius: 2em;
-        padding: .7em 2em;
-        font-weight: 500;
-    }
-
-    .btn-rounded:hover {
-        background: color(primary-dark);
-    }
 }
 
 footer {
@@ -298,7 +309,5 @@ footer {
             text-decoration-color: color(primary);
         }
     }
-
-
 
 }
