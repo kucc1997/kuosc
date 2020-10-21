@@ -3,7 +3,7 @@ This is the source code of the official website of Kathmandu University Open sou
 **Live Project:** http://kucc.ku.edu.np/kuosc/ 
 
 ### Usage
-1. Clone the project: ```git clone https://github.com/kucc1997/kuosc```
+1. Clone the project: ```git clone https://github.com/kucc1997/kuosc.git```
 2. From the project folder open ```index.html``` file in the browser.
 
 ### How to Contribute
@@ -17,6 +17,8 @@ This is the source code of the official website of Kathmandu University Open sou
 - create a new branch you can use your ```username``` as branch name.
 - Make necessary changes and Commit the changes to your newly created branch.
 - Create a pull request from your repo.
+
+**Note: Please Remember, Since this is an open source project do not include any copyrighted design or materials while contributing**
 
 ### Getting Help
 If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
