@@ -29,12 +29,27 @@ a:active {
   transition: .5s;
 }
 
+@media only screen and (max-width: 768px) {
+  .btn-rounded {
+    padding: .7em 2em;
+    margin-top: 1em;
+  }
+}
+
 section {
   padding-top: 4em;
 }
 
 #nav {
-  background-color: transparent;
+  background: #fff;
+  -webkit-box-shadow: .2em .2em 1em #ddd;
+          box-shadow: .2em .2em 1em #ddd;
+  padding: 2px;
+}
+
+#nav .navbar-brand img {
+  height: 70px;
+  width: auto;
 }
 
 #nav .nav-link {
@@ -45,13 +60,81 @@ section {
   text-transform: capitalize;
 }
 
+#nav .active {
+  color: #00bda4;
+}
+
+#nav .navbar-toggler {
+  font-size: 2em;
+  color: #00bda4;
+}
+
 #nav .nav-link:hover {
   color: #00bda4;
 }
 
+#nav .animated-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  margin: 0px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav .animated-icon span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#nav .animated-icon span {
+  background: #00bda4;
+}
+
+#nav .animated-icon span:nth-child(1) {
+  top: 0px;
+}
+
+#nav .animated-icon span:nth-child(2) {
+  top: 10px;
+}
+
+#nav .animated-icon span:nth-child(3) {
+  top: 20px;
+}
+
+#nav .animated-icon.open span:nth-child(1) {
+  top: 11px;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav .animated-icon.open span:nth-child(2) {
+  opacity: 0;
+  /* left: -60px; */
+}
+
+#nav .animated-icon.open span:nth-child(3) {
+  top: 11px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
 .section-banner {
   height: 85vh;
-  background: url(./img/header-bg.svg);
+  background: url(/img/header-bg.svg);
   background-size: cover;
 }
 
@@ -76,6 +159,41 @@ section {
 
 .section-banner a {
   margin-top: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .section-banner {
+    height: 100vh;
+    margin-top: -2em;
+  }
+  .section-banner .container-fluid {
+    width: 90%;
+  }
+  .section-banner h1 {
+    font-size: 1.8em;
+    line-height: 1.3em;
+  }
+  .section-banner p {
+    padding-top: .5em;
+    font-size: 1em;
+    margin-right: .5em;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .section-banner {
+    margin-top: -5em;
+  }
+  .section-banner .container-fluid {
+    width: 95%;
+  }
+  .section-banner h1 {
+    font-size: 1.6em;
+  }
+  .section-banner p {
+    font-size: .9em;
+    margin-right: 1em;
+  }
 }
 
 #about {
@@ -121,6 +239,12 @@ section {
   background-color: #56ccf233;
 }
 
+@media only screen and (max-width: 768px) {
+  #about .feature-box {
+    margin: 2em .5em;
+  }
+}
+
 #open-source,
 #sfd {
   margin: 5em 0em;
@@ -150,6 +274,21 @@ section {
   border-radius: .5em;
 }
 
+@media only screen and (max-width: 768px) {
+  #open-source,
+  #sfd {
+    margin: 0;
+  }
+  #open-source .content-box,
+  #sfd .content-box {
+    margin: 1em;
+  }
+  #open-source .content-box h1,
+  #sfd .content-box h1 {
+    font-size: 2em;
+  }
+}
+
 #communities {
   padding: 1em;
 }
@@ -161,6 +300,10 @@ section {
 
 #communities h1 span {
   color: #00bda4;
+}
+
+#communities .row2 {
+  margin-top: 2em;
 }
 
 #communities .community-box {
@@ -249,10 +392,22 @@ section {
   background-color: #EA777333;
 }
 
+@media only screen and (max-width: 768px) {
+  #communities h1 {
+    font-size: 2em;
+  }
+  #communities .row2 {
+    margin-top: 0;
+  }
+  #communities .community-box {
+    margin: .8em .5em;
+  }
+}
+
 #apply {
   margin-top: 2em;
   padding-top: 3em;
-  background-image: url(./img/hands-left.svg), url(./img/hands-right.svg);
+  background-image: url(/img/hands-left.svg), url(/img/hands-right.svg);
   background-repeat: no-repeat;
   width: 100%;
   padding: 200px 0px;
@@ -268,6 +423,19 @@ section {
 #apply p {
   font-size: 1.3em;
   color: #746e8c;
+}
+
+@media only screen and (max-width: 768px) {
+  #apply {
+    background-image: None;
+    padding: 50px 0px;
+  }
+  #apply h1 {
+    font-size: 2em;
+  }
+  #apply p {
+    font-size: 1em;
+  }
 }
 
 footer {
@@ -302,5 +470,18 @@ footer .mail span {
   text-decoration: underline;
   -webkit-text-decoration-color: #00bda4;
           text-decoration-color: #00bda4;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding: 1.2em 1em;
+  }
+  footer .cta {
+    text-align: center !important;
+  }
+  footer .cta p {
+    font-size: 1em;
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
